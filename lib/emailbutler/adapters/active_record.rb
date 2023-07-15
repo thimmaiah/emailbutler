@@ -14,7 +14,7 @@ module Emailbutler
 
       class Emailbutler::Message < Model
         self.table_name = :emailbutler_messages
-
+        serialize :send_to, Array
         CREATED = 'created'
         REJECTED = 'rejected'
         PROCESSED = 'processed'
